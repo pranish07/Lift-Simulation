@@ -75,8 +75,6 @@ const initializeSimulation = () => {
     lifts.push(lift);
   }
 
-  // Set building height
-  building.style.height = `${numFloors * 70}px`;
 
   // Add event listeners to floor buttons
   const floorButtons = document.querySelectorAll(".floor-button");
