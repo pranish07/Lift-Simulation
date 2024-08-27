@@ -1,7 +1,34 @@
-*,*::before, *::after{
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-body{
-    margin:0;
-    padding:0;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+#setup {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+#setup input {
+  width: 50px;
+  margin: 0 10px;
+}
+#setup button {
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+#building {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.floor {
 }
