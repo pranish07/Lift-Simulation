@@ -126,13 +126,13 @@ body {
 }
 @media (max-width: 768px) {
   #building {
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
     align-items: center;
   }
 
   .floor {
-    flex-direction: column;
-    height: auto;
+    /* flex-direction: column; */
+    /* height: auto; */
     width: 100%;
     padding: 10px 0;
   }
@@ -143,21 +143,16 @@ body {
     margin-bottom: 10px;
   }
 
-  .lift-shaft {
-    height: 70px;
-    width: 100%;
-    margin: 10px 0;
-  }
 
   .lift {
     width: calc(100% - 10px);
     height: 60px;
     left: 5px;
-    bottom: 5px;
+    /* bottom: 5px; */
   }
 
   .lift-door {
-    width: calc(50% - 5px);
+    width: calc(50%);
     height: 60px;
   }
 }
