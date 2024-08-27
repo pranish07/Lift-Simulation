@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+#setup {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+#setup input {
+  width: 50px;
+  margin: 0 10px;
+}
+#setup button {
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+#building {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  width:100%;
+}
+.floor {
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-end; */
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.floor:last-child {
+  border-bottom: none;
+}
+
+.floor-label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.floor-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.floor-button {
+  width: 30px;
+  height: 30px;
+  margin: 2px 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.floor-button:hover {
+  background-color: #e0e0e0;
+}
+
+.lift-shaft {
+  width: 80px;
+  height: 100%;
+  background-color: #ddd;
+  margin: 0 10px;
+  position: relative;
+  left: 100px;
+  border: 1px solid #999;
+  box-sizing: border-box;
+}
+
+.lift {
+  width: 70px;
+  height: 60px;
+  background-color: #999;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  transition: bottom 0.5s ease-in-out;
+}
+
+.lift-door {
+  width: 35px;
+  height: 60px;
+  background-color: #777;
+  position: absolute;
+  top: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.lift-door.left {
+  left: 0;
+  transform-origin: left;
+  border: 1px solid black;
+}
+
+.lift-door.right {
+  right: 0;
+  transform-origin: right;
+  border: 1px solid black;
+}
+.lift-door.open.left {
+  transform: scaleX(0);
+}
+
+.lift-door.open.right {
+  transform: scaleX(0);
+}
+
+.lift-shafts-container {
+  display: flex;
+}
+@media (max-width: 768px) {
+  #building {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .floor {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .floor-buttons {
+    flex-direction: row;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .lift-shaft {
+    height: 70px;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .lift {
+    width: calc(100% - 10px);
+    height: 60px;
+    left: 5px;
+    bottom: 5px;
+  }
+
+  .lift-door {
+    width: calc(50% - 5px);
+    height: 60px;
+  }
+}
