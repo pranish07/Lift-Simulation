@@ -73,7 +73,7 @@ body {
 }
 
 .lift-shaft {
-  width: 80px;
+  width: 0px;
   height: 100%;
   background-color: #ddd;
   margin: 0 10px;
@@ -86,7 +86,7 @@ body {
 .lift {
   width: 70px;
   height: 60px;
-  background-color: #999;
+  background-color: green;
   position: absolute;
   bottom: 5px;
   left: 5px;
@@ -99,7 +99,7 @@ body {
   background-color: #777;
   position: absolute;
   top: 0;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 2.0s ease-in-out;
 }
 
 .lift-door.left {
@@ -123,6 +123,7 @@ body {
 
 .lift-shafts-container {
   display: flex;
+  gap:6rem;
 }
 @media (max-width: 768px) {
   #building {
