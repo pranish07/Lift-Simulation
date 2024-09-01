@@ -113,7 +113,7 @@ const moveLift = (lift, targetFloor) => {
     lift.currentFloor = targetFloor;
     lift.isMoving = false;
     openLiftDoors(lift);
-  }, Math.abs(lift.currentFloor - targetFloor) * 2000);
+  }, Math.abs(lift.currentFloor - targetFloor) * 500);
 };
 
 // Open lift doors
