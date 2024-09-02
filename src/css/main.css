@@ -126,9 +126,10 @@ body {
   gap:6rem;
 }
 @media (max-width: 768px) {
+
   #building {
     /* flex-direction: column-reverse; */
-    align-items: center;
+    padding:1px;
   }
 
   .floor {
@@ -139,21 +140,23 @@ body {
   }
 
   .floor-buttons {
-    flex-direction: row;
     margin-right: 0;
     margin-bottom: 10px;
   }
 
 
   .lift {
-    width: calc(100% - 10px);
+    /* width: calc(100% - 10px); */
     height: 60px;
-    left: 5px;
+    left: 1px;
     /* bottom: 5px; */
   }
 
   .lift-door {
     width: calc(50%);
     height: 60px;
+  }
+  .lift-shafts-container{
+    gap:4rem;
   }
 }
