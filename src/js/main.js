@@ -75,7 +75,6 @@ const initializeSimulation = () => {
     lifts.push(lift);
   }
 
-
   // Add event listeners to floor buttons
   const floorButtons = document.querySelectorAll(".floor-button");
   floorButtons.forEach((button) => {
@@ -105,15 +104,16 @@ const moveLift = (lift, targetFloor) => {
   if (lift.isMoving || lift.isBusy) return;
   lift.isMoving = true;
   lift.targetFloor = targetFloor;
-  lift.element.style.transition = `bottom ${
-    Math.abs(lift.currentFloor - targetFloor) * 0.5
-  }s ease-in-out`;
+
+  const transitionDuration = Math.abs(lift.currentFloor - targetFloor) * 2000;
+
+  lift.element.style.transition = `bottom ${transitionDuration}ms ease-in-out`;
   lift.element.style.bottom = `${(targetFloor - 1) * 70}px`;
   setTimeout(() => {
     lift.currentFloor = targetFloor;
     lift.isMoving = false;
     openLiftDoors(lift);
-  }, Math.abs(lift.currentFloor - targetFloor) * 500);
+  }, Math.abs(lift.currentFloor - targetFloor) * 2000);
 };
 
 // Open lift doors
@@ -135,5 +135,5 @@ const closeLiftDoors = (lift) => {
   setTimeout(() => {
     lift.isBusy = false;
     lift.targetFloor = null;
-  }, 500);
+  }, 1000);
 };
