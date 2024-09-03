@@ -28,7 +28,6 @@ body {
   /* align-items: center; */
   height: 100%;
   padding: 20px;
-  box-sizing: border-box;
   width:100%;
 }
 .floor {
@@ -38,7 +37,6 @@ body {
   height: 70px;
   width: 100%;
   border-bottom: 1px solid #ccc;
-  box-sizing: border-box;
 }
 
 .floor:last-child {
@@ -80,7 +78,6 @@ body {
   position: relative;
   left: 100px;
   border: 1px solid #999;
-  box-sizing: border-box;
 }
 
 .lift {
@@ -148,7 +145,7 @@ body {
   .lift {
     /* width: calc(100% - 10px); */
     height: 60px;
-    left: 1px;
+    left: -10px;
     /* bottom: 5px; */
   }
 
