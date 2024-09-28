@@ -18,12 +18,12 @@ document.getElementById("start").addEventListener("click", () => {
   numFloors = parseInt(document.getElementById("floors").value);
   numLifts = parseInt(document.getElementById("lifts").value);
 
-  if (numFloors >= 1 && numFloors <= 10 && numLifts >= 1 && numLifts <= 5) {
+  if (numFloors >= 1 && numLifts >= 1 ) {
     document.getElementById("setup").style.display = "none";
     document.getElementById("simulation").style.display = "flex";
     initializeSimulation();
   } else {
-    alert("Please enter valid numbers for floors (1-10) and lifts (1-5).");
+    alert("Please enter valid numbers for floors and lifts i.e. more than 1 .");
   }
 });
 
